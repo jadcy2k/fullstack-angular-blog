@@ -44,7 +44,7 @@
           class="invalid-feedback d-block">El password no es válido</small>
     </div>
 
-    <input type="submit" value="ENVIAR" class="btn btn-success">  
+    <input type="submit" value="ENVIAR" class="btn btn-success" [disabled]="registerForm.invalid" />  
   </form>
 
 

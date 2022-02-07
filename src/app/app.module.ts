@@ -12,6 +12,10 @@ import { Error404Component } from './components/error404/error404.component';
 // IMPORTAR "FormModule" para trabajar con forumlarios (Leccion 18-60)
 import { FormsModule } from '@angular/forms';
 
+// Importar módulos de comunicación HTML (Leccion 19-63):
+//import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   // Módulos que se usarán de forma global:
   declarations: [
@@ -26,7 +30,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     routing,
     appRoutingProviders,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   
   providers: [],
