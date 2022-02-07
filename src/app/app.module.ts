@@ -1,16 +1,37 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+// IMPORTAR "ROUTER" (Leccion 18-57)
+import { routing, appRoutingProviders } from './app.routing';
 
 import { AppComponent } from './app.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { HomeComponent } from './components/home/home.component';
+import { Error404Component } from './components/error404/error404.component';
+
+// IMPORTAR "FormModule" para trabajar con forumlarios (Leccion 18-60)
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
+  // Módulos que se usarán de forma global:
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    RegisterComponent,
+    HomeComponent,
+    Error404Component
   ],
+  
   imports: [
-    BrowserModule
+    BrowserModule,
+    routing,
+    appRoutingProviders,
+    FormsModule
   ],
+  
   providers: [],
-  bootstrap: [AppComponent]
+  
+  // Es el componente principal (home)
+  bootstrap: [AppComponent] 
 })
 export class AppModule { }
